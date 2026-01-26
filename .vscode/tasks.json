@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B", "build",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_CXX_STANDARD=20",
+                "&&",
+                "cmake",
+                "--build", "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build the project using CMake"
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B", "build",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_CXX_STANDARD=20",
+                "&&",
+                "cmake",
+                "--build", "build"
+            ],
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "detail": "Build the project in Release mode"
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "rm",
+            "args": ["-rf", "build"],
+            "detail": "Clean build directory"
+        }
+    ]
+}
