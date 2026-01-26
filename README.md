@@ -1,7 +1,7 @@
 # Modern C++ upskill project v3 - PROJECT STATUS CHECKPOINT
 
-**Last Updated**: 2026-01-25  
-**Status**: Goal #2 COMPLETE - Feature definitions approved and checkpointed
+**Last Updated**: 2026-01-25
+**Status**: Goal #3 COMPLETE - Dataset acquired and ready for implementation
 
 ---
 
@@ -86,7 +86,7 @@ Each chunk provides:
 - **Preference for lossless formats when available** 
 
 ### Dataset Source
-- Real-world FLIR imagery can be found on local machine at ~/data/FLIR_ADAS_V2
+- Real-world FLIR imagery can be found on local machine at /home/kc/data/FLIR_ADAS_v2
   - Dataset: FLIR ADAS v2 - Thermal imagery for autonomous driving research
   - Source: https://adas-dataset-v2.flirconservator.com/
   - Approach: copy from a representative subset of data from local dataset in ~/data into the working structure within this current directory, do not work on the downloaded dataset in place 
@@ -179,22 +179,38 @@ project_root/
 
 ---
 
-## GOAL #3 - Dataset Acquisition
+## GOAL #3 - Dataset Acquisition ✅
 
-**STATUS**: PENDING
+**STATUS**: COMPLETE (2026-01-25)
 
-**Requirements**:
-1. Identify public sources for standard test images
-2. Identify public sources for high-contrast images  
-3. Get approval for selected sources
-4. Copy FLIR thermal images from ~/data/FLIR_ADAS_V2 into project structure
-5. Copy standard/high-contrast images from approved public sources
-6. Verify dataset completeness (10-12 images total)
+**Accomplishments**:
+- ✅ Identified public sources (OpenCV samples, USC-SIPI database)
+- ✅ Sources approved
+- ✅ Copied 4 FLIR thermal images from /home/kc/data/FLIR_ADAS_v2
+- ✅ Downloaded 4 standard images from OpenCV samples
+- ✅ Downloaded 2 high-contrast images from OpenCV samples
+- ✅ Generated 1 synthetic checkerboard pattern (1024x1024)
+- ✅ Verified dataset completeness (11 images total)
 
-**Target Dataset Composition**:
-- 4-5 standard test images (various content types)
-- 3-4 thermal images from FLIR ADAS v2
-- 2-3 high-contrast images
+**Final Dataset**:
+| Category | Files | Dimensions | Format |
+|----------|-------|------------|--------|
+| standard/ | baboon.jpg | 512x512 | RGB |
+| | building.jpg | 868x600 | RGB |
+| | butterfly.jpg | 493x356 | RGB |
+| | fruits.jpg | 512x480 | RGB |
+| thermal/ | thermal_01.jpg | 640x512 | Grayscale |
+| | thermal_02.jpg | 640x512 | Grayscale |
+| | thermal_03.jpg | 640x512 | Grayscale |
+| | thermal_04.jpg | 640x512 | Grayscale |
+| high_contrast/ | chessboard.png | 1754x1240 | RGBA |
+| | box_in_scene.png | 512x384 | Grayscale |
+| | checkerboard_1024.png | 1024x1024 | 1-bit |
+
+**Sources**:
+- Thermal: FLIR ADAS v2 (local)
+- Standard/High-contrast: [OpenCV samples](https://github.com/opencv/opencv/tree/master/samples/data)
+- Synthetic: ImageMagick generated
 
 ---
 
@@ -217,12 +233,13 @@ project_root/
 ### Completed Goals
 - ✅ Goal #1: Project selection (2026-01-25)
 - ✅ Goal #2: Feature definitions (2026-01-25)
+- ✅ Goal #3: Dataset acquisition (2026-01-25)
 
 ### Active Goals
-- ⏳ Goal #3: Dataset acquisition (NEXT)
+- ⏳ Goal #4: Feature implementation (NEXT - start with Feature 1)
 
 ### Pending Goals
-- ⏸️ Goal #4: Feature implementation (waiting for Goal #3)
+- None
 
 ### Completed Features
 - None yet (awaiting dataset and Feature 1 start)
@@ -238,16 +255,12 @@ project_root/
 ## NEXT STEPS
 
 **Immediate Next Actions**:
-1. **Dataset Acquisition**: 
-   - Identify and get approval for public image sources
-   - Copy approved images into project structure
-   
-2. **Begin Feature 1**: 
+1. **Begin Feature 1**:
    - Project setup and build system
    - Establish CMake configuration
    - Configure VSCode integration
-   
-3. **Continue Sequential Implementation**: 
+
+2. **Continue Sequential Implementation**:
    - Work through Features 2-9 in order
    - Document learnings after each feature
    - Update this checkpoint document with progress
@@ -258,7 +271,8 @@ project_root/
 
 - **v1**: Initial project specification
 - **v2**: Added Goal #1 completion, refined dataset requirements
-- **v3** (2026-01-25): Goal #2 complete, all feature definitions checkpointed, ready for dataset acquisition and implementation
+- **v3** (2026-01-25): Goal #2 complete, all feature definitions checkpointed
+- **v4** (2026-01-25): Goal #3 complete, dataset acquired (11 images), ready for Feature 1
 
 ---
 
