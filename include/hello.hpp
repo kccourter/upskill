@@ -1,5 +1,4 @@
-#ifndef __HELLO_HPP__
-#define __HELLO_HPP__
+#pragma once
 
 #include <string>
 
@@ -9,9 +8,8 @@ protected:
     std::string myName;
     
 public:
-    Hello( std::string name ) {};
+    Hello( std::string_view name );
     void sayMyName();
 };
 
-#endif
 

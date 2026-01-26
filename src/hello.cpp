@@ -4,14 +4,15 @@
 
 
 
-Hello::Hello( std::string name ) {
+Hello::Hello( std::string_view name ) {
     myName = name;
     numCalls=0;
 }
 
 void Hello::sayMyName() {
-    std::cout << "My name is " << myName << std::endl;
     numCalls++;
+    std::cout << "My name is " << myName << std::endl;
+    std::cout << "I've told you " << numCalls << " times, bitch." << std::endl;
 }
 
 
