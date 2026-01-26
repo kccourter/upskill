@@ -236,16 +236,17 @@ project_root/
 - ✅ Goal #3: Dataset acquisition (2026-01-25)
 
 ### Active Goals
-- ⏳ Goal #4: Feature implementation (NEXT - start with Feature 1)
+- ⏳ Goal #4: Feature implementation (IN PROGRESS - Feature 2 next)
 
 ### Pending Goals
 - None
 
 ### Completed Features
-- None yet (awaiting dataset and Feature 1 start)
+- ✅ Feature 1: Project Setup & Build System (2026-01-26)
 
 ### Modern C++ Patterns Practiced
-- None yet (will be tracked as features are completed)
+- `std::string_view` for lightweight string parameters
+- `#pragma once` vs include guards
 
 ### Performance Baselines
 - None yet (will be established in Feature 4 and beyond)
@@ -255,13 +256,11 @@ project_root/
 ## NEXT STEPS
 
 **Immediate Next Actions**:
-1. **Begin Feature 1**:
-   - Project setup and build system
-   - Establish CMake configuration
-   - Configure VSCode integration
+1. **Begin Feature 2**: Image I/O Framework
+   - RAII, smart pointers, move semantics
 
 2. **Continue Sequential Implementation**:
-   - Work through Features 2-9 in order
+   - Work through Features 3-9 in order
    - Document learnings after each feature
    - Update this checkpoint document with progress
 
@@ -273,6 +272,7 @@ project_root/
 - **v2**: Added Goal #1 completion, refined dataset requirements
 - **v3** (2026-01-25): Goal #2 complete, all feature definitions checkpointed
 - **v4** (2026-01-25): Goal #3 complete, dataset acquired (11 images), ready for Feature 1
+- **v5** (2026-01-26): Feature 1 complete - CMake build system, VSCode integration, C++20
 
 ---
 
