@@ -17,13 +17,16 @@ set(SOURCES
     src/main.cpp
     src/hello.cpp
     src/Image.cpp
+    src/stb_impl.cpp
 )
 
 # Headers
 set(HEADERS
     include/hello.hpp
     include/Image.hpp
-)
+    include/stb_image.h 
+    include/stb_image_write.h 
+    )
 
 # Create executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})

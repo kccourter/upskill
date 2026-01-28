@@ -1,7 +1,7 @@
 #pragma once
-
-#include <opencv2/opencv.hpp>
 #include <string>
+#include "stb_image.h"
+#include "stb_image_write.h"
 
 
 class Image {
@@ -15,7 +15,6 @@ public:
 protected:
     std::string img_path;
     int32_t rows, cols, channels;
-    cv::Mat img;
 
 private:
 
