@@ -1,14 +1,22 @@
-#include "hello.hpp"
 #include <iostream>
+#include <opencv2/opencv.hpp>
+
+#include "Image.hpp"
+
 
 
 int main( void ) {
-
     std::cout << "entering main" << std::endl;
 
-    Hello howdy( "Heisenberg" );
+    try {
+        Image im = Image( "/Users/kcourter/dev/upskill/data/test_images/standard/baboon.jpg" );
+        std::cout << "Image is: " << im << std::endl;
+    }
+    catch (...) {
+        std::cerr << "Error: Could not load image" << std::endl;
+    }
 
-    howdy.sayMyName();
+ 
 
     return 0;
 }
