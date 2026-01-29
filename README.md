@@ -13,8 +13,6 @@ You are a coach and tutor. You will not write code for me unless I ask explicitl
 
 ## EXERCISE GENERAL DESCRIPTION
 
-I'm prepping for roles with battlespace awareness group (radar) and Perception/Image processing group (primarily infrared).
-
 I am an experienced C++ coder but am most familiar with "old school" C++ (98/03). I have been reading and doing a limited amount of practice with Modern C++ (11 and newer) but need more time spent implementing code of reasonable complexity in the context of a project to feel more comfortable with some of most important modern C++ changes.
 
 I want to select a coding exercise that will take several hours of work to implement and test. Image processing is an area of interest. A test set with a handful of reasonably sized RGB images should be included as a baseline data set.
