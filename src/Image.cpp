@@ -34,8 +34,11 @@ void Image::write( std::string file_path, Image::ImgType type ) {
     switch( type ) {
         case ImgType::PNG:
             std::cout << "Writing to " << file_path << std::endl;
-            retVal = stbi_write_png( file_path.c_str(), cols, rows, 3, img.get(), cols * 3 );
+            retVal = stbi_write_png( file_path.c_str(), cols, rows, channels, img.get(), cols * channels );
             std::cout << "stbi_write_png result = " << retVal << std::endl;
+            if (retVal == 0) {
+                std::cout << "Good luck figuring out what's wrong" << std::endl;
+            }
             break;
         case ImgType::JPG:
             break;

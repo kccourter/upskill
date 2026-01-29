@@ -18,7 +18,7 @@ int main( void ) {
         std::cerr << err.what() << std::endl;
     }
 
-    im->write( "/Users/kcourter/dev/upskill/data/test_images/results/bletch.jpg", Image::ImgType::PNG );
+    im->write( "/Users/kcourter/dev/upskill/data/results/bletch.png", Image::ImgType::PNG );
  
     delete im;
 
