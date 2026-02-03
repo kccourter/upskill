@@ -30,5 +30,25 @@ set(HEADERS
 
 # Create executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
-target_include_directories( ${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)                                                               
+target_include_directories( ${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries( ${PROJECT_NAME} ${OpenCV_LIBS} )
+
+# Enable testing
+enable_testing()
+
+# Test executable
+add_executable(test_image
+    test/test_main.cpp
+    test/test_image.cpp
+    src/Image.cpp
+    src/stb_impl.cpp
+)
+
+target_include_directories(test_image PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/test
+)
+
+target_link_libraries(test_image ${OpenCV_LIBS})
+
+add_test(NAME ImageTests COMMAND test_image)
